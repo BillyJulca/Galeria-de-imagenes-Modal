@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.slider {
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    
+}
+
+.title{   
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 39px;
+    text-align: center;
+    color: #020841;
+    mix-blend-mode: luminosity;
+    margin-top: 15px;
+}
+
+.contents {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    margin: auto;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.fondo1 {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: auto;
+    margin-bottom: 20px;
+    position: absolute;
+    left: 26px;
+    top: 69px;
+    background: #104de5;
+}
+
+.fondo2 {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: auto;
+    margin-bottom: 20px;
+    position: absolute;
+    left: 26px;
+    top: 71px;
+    background: #dc3545;
+}
+
+.fondo3 {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: auto;
+    margin-bottom: 20px;
+    position: absolute;
+    left: 20.1px;
+    top: 69px;
+    background: #ffc107;
+}
+
+.person-container {
+    padding: 0 10vw;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.rol-txt {
+    padding: 10px;
+}
+
+.product-container::-webkit-scrollbar {
+    display: none;
+  }
+
+.person-card {
+    flex: 0 0 auto;
+    width: 250px;
+    height: 450px;
+    margin-left: 28px;
+    margin-top: 50px;
+    /*background-color: aqua;*/
+    position: relative;
+  }
+
+.person-content {
+    width: 250px;
+    height: 250px;
+    /*background-color: #000000;*/
+    position: relative;
+}
+
+.team-img {
+    width: 200px;
+    height: 280px;
+    margin: auto;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 20px;
+    border-radius: 100%;
+  }
+
+.circulo .names {
+    text-align: center;
+    padding-top: 10px;
+    color: #000000;
+  }
+
+p {
+    text-align: center;
+}
+
+.names .fa-brands{
+    color: #0e76a8;
+    text-decoration: none;
+}
+
+.pre-btn,
+.nxt-btn {
+  border: none;
+  width: 10vw;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+  cursor: pointer;
+  z-index: 8;
+}
+
+.pre-btn {
+    left: 0;
+    transform: rotate(180deg);
+  }
+  
+  .nxt-btn {
+    right: 0;
+  }
+
+/* MODAL */
+
+.overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .7s ease;
+    /*visibility: hidden;
+    opacity: 0;*/
+}
+
+.overlay .slideshow {
+    width: 90%;
+    height: 90%;
+    background-color: #fff;
+    color: #000000;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    border: 5px #fff;
+    border-radius: 16px;
+}
+
+.btn-cerrar {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 35px;
+    color: #020841;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    transition: all .2s ease;
+    cursor: pointer;
+}
+
+.content-overlay {
+    position: relative;
+    display: flex;
+    width: 800px;
+    overflow: hidden;
+    align-content: center;
+    text-align: center;
+}
+
+.slideshow .person-img {
+    width: 250px;
+    height: 350px;
+    margin: auto;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 20px;
+    border-radius: 100%;
+    object-fit: contain;
+    left: -30px;
+    top: 145px;
+    position: absolute;
+}
+
+.overlay-fondo1 {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: auto;
+    margin-bottom: 20px;
+    position: absolute;
+    left: 0;
+    top: 250px;
+    background: #104de5;
+}
+
+.overlay-title {
+    position: absolute;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    display: flex;
+    color: #F7413E;
+    line-height: 39px;
+    align-items: center;
+    text-align: center;
+    margin-top: 180px;
+    margin-left: 250px;
+
+}
+
+.overlay-name {
+    position: absolute;
+    width: 550px;
+    height: 48px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 50px;
+    line-height: 45px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #020841;
+    margin-top: 250px;
+    margin-left: 250px;
+}
+
+.role-txt {
+    position: absolute;
+    width: 400px;
+    height: 32px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    display: flex;
+    align-items: center;
+    color: #828282;
+    margin-top: 310px;
+    margin-left: 250px;
+
+}
+
+.ubicacion{
+    position: absolute;
+    width: 150px;
+    height: 32px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    border: 1px solid #E7E7E7;
+    box-sizing: border-box;
+    border-radius: 8px;
+    margin-top: 410px;
+    margin-left: 250px;
+}
+
+.especialista {
+    position: absolute;
+    width: 220px;
+    height: 32px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    border: 1px solid #E7E7E7;
+    box-sizing: border-box;
+    margin-top: 410px;
+    margin-left: 450px;
+}
+
+.over-text {
+    position: absolute;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #020841;
+    margin-top: 5px;
+    margin-left: 30px;
+}
+
+.fa-solid {
+    margin-right: 10px;
+}
+
+.fa-brands {
+    margin-left: 10px;
+    color: #0e76a8;
+    text-decoration: none;
+}
+
+
+
+@media screen and (max-width: 800px) {
+    .person-card {
+        flex: 50%;
+        max-width: 50%;
+    }
+    .slideshow img {
+        width: 98%;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .person-card {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
