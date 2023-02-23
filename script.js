@@ -1,13 +1,21 @@
-document.addEventListener('DomContentLoaded', function (){
-
-    let contador = 0 
-    const contenedor = document.querySelector('.slideshow')
-    const overlay = document.querySelector('.overlay')
-    const img_slideshow = document.querySelector('.slideshow img')
-
-document.querySelector('.btn-cerrar').addEventListener('click', () => {
-    overlay.style.opacity = 0;
-    overlay.style.visibility = 'hidden';
-})
-})
-
+// Función para abrir el popup
+function abrirVentana() {
+    // Mostrar la capa overlay
+    document.querySelector(".overlay").style.display = "flex";
+  }
+  
+  // Función para cerrar el popup
+  function cerrarVentana() {
+    // Ocultar la capa overlay
+    document.querySelector(".overlay").style.display = "none";
+  }
+  
+  // Agregar evento click a cada imagen de persona
+  const images = document.querySelectorAll(".team-img");
+  images.forEach((img) => {
+    img.addEventListener("click", abrirVentana);
+  });
+  
+  // Agregar evento click al botón "X" dentro del popup
+  const btnCerrar = document.querySelector(".btn-cerrar");
+  btnCerrar.addEventListener("click", cerrarVentana);
